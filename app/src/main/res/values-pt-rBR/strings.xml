@@ -1,6 +1,6 @@
 <resources>
     <string name="agreement_title">Política</string>
-    <string name="agreement_text">Aqui está nossa política de usuário. Leia e concorde com ela. &lt;a href=&quot;https://iamr0s.github.io/Tiny-InstallerDocs/terms&quot;&gt;Política do Usuário&lt;/a&gt;, &lt;a href=&quot;https://iamr0s.github.io/Installer</string>
+    <string name="agreement_text">Aqui está nossa política de usuário. Leia e concorde com ela. &lt;a href=&quot;https://iamr0s.github.io/Tiny-InstallerDocs/terms&quot;&gt;Política do Usuário&lt;/a&gt;, &lt;a href=&quot;https://iamr0s.github.io/Installer&quot;&gt;Instalador&lt;/a&gt;</string>
 
     <string name="user_terms">Política do usuário</string>
     <string name="privacy_policy">Política de Privacidade</string>
