@@ -10,10 +10,6 @@ plugins {
     id("kotlinx-serialization")
 }
 
-val keystoreProps = Properties().apply {
-    load(FileInputStream(rootProject.file("keystore/r0s.properties")))
-}
-
 val app_version = "2.0.0"
 
 @Suppress("UnstableApiUsage")
@@ -25,7 +21,7 @@ android {
         // 请换一个applicationId，不要和官方的任何发布版本产生冲突。
         // If you use InstallerX source code, package it into apk or other installation package format
         // Please change the applicationId to one that does not conflict with any official release.
-        applicationId = "com.rosan.installer.x"
+        applicationId = "dev.trindadedev.installer.fork"
         namespace = "com.rosan.installer"
         minSdk = 21
         targetSdk = 34
