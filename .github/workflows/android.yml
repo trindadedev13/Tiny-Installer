@@ -35,9 +35,23 @@ jobs:
         id: gradle_build_debug
         run: ./gradlew assembleDebug
 
-      - name: Upload debug apk
+      - name: Upload preview debug apk
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
           compression-level: 0
-          path: app/build/outputs/apk
+          path: app/build/outputs/apk/preview
+          
+      - name: Upload stable debug apk
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          compression-level: 0
+          path: app/build/outputs/apk/stable
+          
+      - name: Upload unstable debug apk
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          compression-level: 0
+          path: app/build/outputs/apk/unstable
