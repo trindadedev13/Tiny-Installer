@@ -63,7 +63,7 @@ fun MainPage(navController: NavController) {
         }
     )
     
-    val pagerState = rememberPagerState(pageCount = data.size)
+    val pagerState = rememberPagerState(pageCount = { data.size })
     val currentPage = pagerState.currentPage
     fun onPageChanged(page: Int) {
         GlobalScope.launch(Dispatchers.Main) {
