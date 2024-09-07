@@ -18,9 +18,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        // 你如果根据InstallerX的源码进行打包成apk或其他安装包格式
-        // 请换一个applicationId，不要和官方的任何发布版本产生冲突。
-        // If you use InstallerX source code, package it into apk or other installation package format
+        // If you use Tiny-Installer source code, package it into apk or other installation package format
         // Please change the applicationId to one that does not conflict with any official release.
         applicationId = "dev.trindadedev.installer.fork"
         namespace = "com.rosan.installer"
@@ -56,7 +54,7 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            resValue("string", "app_name", "InstallerX-Fork")
+            resValue("string", "app_name", "Tiny-Installer")
             resValue("string", "app_version", app_version)
             resValue("string", "GIT_COMMIT_HASH", getGitHash())
             resValue("string", "GIT_COMMIT_AUTHOR", getGitCommitAuthor())
@@ -65,7 +63,7 @@ android {
         getByName("debug") {
             applicationIdSuffix = ".debug"
             versionNameSuffix = getShortGitHash()
-            resValue("string", "app_name", "InstallerX-Fork Debug")
+            resValue("string", "app_name", "Tiny-Installer Debug")
             resValue("string", "app_version", app_version)
             resValue("string", "GIT_COMMIT_HASH", getGitHash())
             resValue("string", "GIT_COMMIT_AUTHOR", getGitCommitAuthor())

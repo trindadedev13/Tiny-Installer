@@ -1,6 +1,6 @@
 <resources>
     <string name="agreement_title">温馨提示</string>
-    <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=&quot;https://iamr0s.github.io/InstallerXDocs/terms&quot;&gt;《用户条款》&lt;/a&gt;与&lt;a href=&quot;https://iamr0s.github.io/InstallerXDocs/privacy&quot;&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。\n同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
+    <string name="agreement_text">根据相关政策规定，您需要先阅读并同意&lt;a href=&quot;https://iamr0s.github.io/Tiny-InstallerDocs/terms&quot;&gt;《用户条款》&lt;/a&gt;与&lt;a href=&quot;https://iamr0s.github.io/Tiny-InstallerDocs/privacy&quot;&gt;《隐私政策》&lt;/a&gt;后才能开始使用本软件。\n同意后不再弹出此提示，可通过设置页点击链接可再次查看相关文件内容。</string>
 
     <string name="user_terms">用户条款</string>
     <string name="privacy_policy">隐私政策</string>
@@ -130,7 +130,7 @@
     <string name="installer_progress_channel_name">安装过程通知</string>
     <string name="installer_background_channel_name">后台通知</string>
 
-    <string name="installer_running">InstallerX 运行中</string>
+    <string name="installer_running">Tiny-Installer 运行中</string>
 
     <string name="installer_version">版本：%s (%s)</string>
     <string name="installer_version2">%s (%s)</string>
