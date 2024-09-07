@@ -139,6 +139,24 @@ class RoomSchemaArgProvider(
     }
 }
 
+fun execAndGetOutput(vararg command: String): String {
+    val stdout = ByteArrayOutputStream()
+    exec {
+        commandLine(*command)
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+fun getGitHash() = execAndGetOutput("git", "rev-parse", "HEAD")
+
+fun getShortGitHash() = execAndGetOutput("git", "rev-parse", "--short", "HEAD")
+
+fun getGitBranch() = execAndGetOutput("git", "rev-parse", "--abbrev-ref", "HEAD")
+
+fun getGitCommitAuthor() = execAndGetOutput("git", "log", "-1", "--pretty=format:%an")
+
+
 dependencies {
     compileOnly(project(":hidden-api"))
 
@@ -185,3 +203,5 @@ dependencies {
 
     implementation(libs.iamr0s.androidAppProcess)
 }
+
+
