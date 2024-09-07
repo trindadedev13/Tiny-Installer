@@ -10,7 +10,7 @@
 [versions]
 agp = "8.6.0"
 kotlin = "2.0.20"
-compose-compiler = "1.4.7"
+compose-compiler = "2.0.20"
 compose = "1.7.0"
 room = "2.6.1"
 ktx-serialization = "1.7.2"
@@ -23,6 +23,7 @@ agp-app = { id = "com.android.application", version.ref = "agp" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose" version.ref = "compose-compiler" }
 
 [libraries]
 androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.13.1" }
