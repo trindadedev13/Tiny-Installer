@@ -10,8 +10,8 @@ on:
       - 'main'
 
 jobs:
-  app-release-library:
-    name: Build App Release APK
+  app-debug-library:
+    name: Build App Debug APK
     runs-on: ubuntu-latest
 
     steps:
