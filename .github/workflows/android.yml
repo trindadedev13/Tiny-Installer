@@ -40,4 +40,4 @@ jobs:
         with:
           name: app-debug
           compression-level: 0
-          path: app/build/
+          path: app/build/outputs/apk
