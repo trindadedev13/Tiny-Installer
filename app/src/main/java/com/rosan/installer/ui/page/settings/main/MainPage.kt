@@ -42,7 +42,7 @@ import kotlinx.coroutines.launch
 @OptIn(DelicateCoroutinesApi::class, ExperimentalFoundationApi::class)
 @Composable
 fun MainPage(navController: NavController) {
-    val pagerState = rememberPagerState()
+    val pagerState = rememberPagerState(0)
     val currentPage = pagerState.currentPage
     fun onPageChanged(page: Int) {
         GlobalScope.launch(Dispatchers.Main) {
