@@ -75,7 +75,7 @@ rikka-shizuku-provider = { group = "dev.rikka.shizuku", name = "provider", versi
 
 # Coil: An image loader for Compose
 # https://coil-kt.github.io/coil/compose/
-compose-coil = { group = "io.coil-kt", name = "coil-compose", version = "2.4.0" }
+compose-coil = { group = "io.coil-kt", name = "coil-compose", version = "2.7.0" }
 
 # XXPermissions
 # https://github.com/getActivity/XXPermissions
