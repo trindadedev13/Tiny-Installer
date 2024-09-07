@@ -10,8 +10,8 @@ on:
       - 'main'
 
 jobs:
-  app-debug-library:
-    name: Build App Debug APK
+  tiny-debug-library:
+    name: Build Tiny Debug APK
     runs-on: ubuntu-latest
 
     steps:
@@ -38,20 +38,20 @@ jobs:
       - name: Upload preview debug apk
         uses: actions/upload-artifact@v4
         with:
-          name: installer-x-fork-preview
+          name: tiny-installer-preview
           compression-level: 0
           path: app/build/outputs/apk/preview/debug
           
       - name: Upload stable debug apk
         uses: actions/upload-artifact@v4
         with:
-          name: installer-x-fork-stable
+          name: tiny-installer-stable
           compression-level: 0
           path: app/build/outputs/apk/stable/debug
           
       - name: Upload unstable debug apk
         uses: actions/upload-artifact@v4
         with:
-          name: installer-x-fork-unstable
+          name: tiny-installer-unstable
           compression-level: 0
           path: app/build/outputs/apk/unstable/debug
