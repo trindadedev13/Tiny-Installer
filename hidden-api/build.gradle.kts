@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.rosan.hidden_api"
+    namespace = "dev.trindadedev.hidden_api"
     compileSdk = 33
 
     defaultConfig {

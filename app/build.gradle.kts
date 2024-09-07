@@ -20,8 +20,8 @@ android {
     defaultConfig {
         // If you use Tiny-Installer source code, package it into apk or other installation package format
         // Please change the applicationId to one that does not conflict with any official release.
-        applicationId = "dev.trindadedev.installer.fork"
-        namespace = "com.rosan.installer"
+        applicationId = "dev.trindadedev.tinyinstaller"
+        namespace = "dev.trindadedev.tinyinstaller"
         minSdk = 21
         targetSdk = 34
         versionCode = 26
