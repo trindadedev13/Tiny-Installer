@@ -25,7 +25,7 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 [libraries]
-androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.10.1" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version = "1.13.1" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.9.2" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.1" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
