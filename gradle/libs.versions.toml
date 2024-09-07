@@ -60,7 +60,7 @@ koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", versi
 
 # Lottie for Android Compose
 # http://airbnb.io/lottie/#/android-compose
-lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.0.0" }
+lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.5.2" }
 
 # Pager layouts
 # https://google.github.io/accompanist/pager/
