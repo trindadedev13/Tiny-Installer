@@ -15,7 +15,7 @@ val keystoreProps = Properties().apply {
 
 @Suppress("UnstableApiUsage")
 android {
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         // 你如果根据InstallerX的源码进行打包成apk或其他安装包格式
@@ -25,7 +25,7 @@ android {
         applicationId = "com.rosan.installer.x"
         namespace = "com.rosan.installer"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 26
         versionName = "1.7"
 
