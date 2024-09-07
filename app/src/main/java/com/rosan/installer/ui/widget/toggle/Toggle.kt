@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple.ripple
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
@@ -47,7 +47,7 @@ fun Toggle(
                     interactionSource = remember {
                         MutableInteractionSource()
                     },
-                    indication = rememberRipple(color = contentColor)
+                    indication = ripple()
                 )
                 .padding(vertical = 8.dp, horizontal = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
