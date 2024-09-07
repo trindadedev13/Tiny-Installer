@@ -38,20 +38,20 @@ jobs:
       - name: Upload preview debug apk
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
+          name: installer-x-fork-preview
           compression-level: 0
           path: app/build/outputs/apk/preview
           
       - name: Upload stable debug apk
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
+          name: installer-x-fork-stable
           compression-level: 0
           path: app/build/outputs/apk/stable
           
       - name: Upload unstable debug apk
         uses: actions/upload-artifact@v4
         with:
-          name: app-debug
+          name: installer-x-fork-unstable
           compression-level: 0
           path: app/build/outputs/apk/unstable
