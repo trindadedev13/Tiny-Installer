@@ -3,6 +3,8 @@ package com.rosan.installer.ui.page.settings
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
+import androidx.compose.animation.core.slideInVertically
+import androidx.compose.animation.core.slideOutVertically
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
@@ -12,6 +14,9 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.rosan.installer.ui.page.settings.config.apply.ApplyPage
 import com.rosan.installer.ui.page.settings.config.edit.EditPage
 import com.rosan.installer.ui.page.settings.main.MainPage
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 
 @OptIn(ExperimentalAnimationApi::class, ExperimentalComposeUiApi::class)
 @Composable
@@ -24,18 +29,10 @@ fun SettingsPage() {
     ) {
         composable(
             route = SettingsScreen.Main.route,
-            enterTransition = {
-                null
-            },
-            exitTransition = {
-                null
-            },
-            popEnterTransition = {
-                null
-            },
-            popExitTransition = {
-                null
-            }
+            enterTransition = { null },
+            exitTransition = { null },
+            popEnterTransition = { null },
+            popExitTransition = { null }
         ) {
             MainPage(navController = navController)
         }
@@ -47,8 +44,9 @@ fun SettingsPage() {
                 }
             ),
             enterTransition = {
-                slideIntoContainer(
-                    AnimatedContentScope.SlideDirection.Up,
+                slideInVertically(
+                    initialOffsetY = { fullHeight -> fullHeight },
+                    animationSpec = tween(durationMillis = 300)
                 )
             },
             exitTransition = {
@@ -58,16 +56,16 @@ fun SettingsPage() {
                 null
             },
             popExitTransition = {
-                slideOutOfContainer(
-                    AnimatedContentScope.SlideDirection.Down,
+                slideOutVertically(
+                    targetOffsetY = { fullHeight -> -fullHeight },
+                    animationSpec = tween(durationMillis = 300)
                 )
             }
         ) {
             val id = it.arguments?.getLong("id")
             EditPage(
                 navController = navController,
-                id = if (id != -1L) id
-                else null
+                id = if (id != -1L) id else null
             )
         }
 
