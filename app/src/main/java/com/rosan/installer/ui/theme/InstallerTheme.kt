@@ -87,6 +87,7 @@ private val DarkColorScheme = darkColorScheme(
 @Composable
 fun InstallerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    highContrastDarkTheme: Boolean = false,
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
@@ -133,3 +134,6 @@ fun InstallerTheme(
         content = content
     )
 }
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
+fun supportsDynamicTheming() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
