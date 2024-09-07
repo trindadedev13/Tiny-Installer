@@ -3,8 +3,6 @@ package com.rosan.installer.ui.page.settings
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
-import androidx.compose.animation.core.slideInVertically
-import androidx.compose.animation.core.slideOutVertically
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
