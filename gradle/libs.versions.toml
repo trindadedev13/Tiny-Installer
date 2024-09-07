@@ -13,7 +13,7 @@ kotlin = "1.9.25"
 compose-compiler = "1.4.7"
 compose = "1.7.0"
 room = "2.5.1"
-ktx-serialization = "1.5.1"
+ktx-serialization = "1.7.2"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
 
