@@ -13,6 +13,8 @@ val keystoreProps = Properties().apply {
     load(FileInputStream(rootProject.file("keystore/r0s.properties")))
 }
 
+val app_version = "2.0.0"
+
 @Suppress("UnstableApiUsage")
 android {
     compileSdk = 34
@@ -27,7 +29,7 @@ android {
         minSdk = 21
         targetSdk = 34
         versionCode = 26
-        versionName = "1.7"
+        versionName = app_version
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -45,41 +47,31 @@ android {
 
     signingConfigs {
         getByName("debug") {
-            keyAlias = keystoreProps.getProperty("keyAlias")
-            keyPassword = keystoreProps.getProperty("keyPassword")
-            storeFile = file(keystoreProps.getProperty("storeFile"))
-            storePassword = keystoreProps.getProperty("storePassword")
-            enableV1Signing = true
-            enableV2Signing = true
-        }
-
-        create("release") {
-            keyAlias = keystoreProps.getProperty("keyAlias")
-            keyPassword = keystoreProps.getProperty("keyPassword")
-            storeFile = file(keystoreProps.getProperty("storeFile"))
-            storePassword = keystoreProps.getProperty("storePassword")
-            enableV1Signing = true
-            enableV2Signing = true
+            storeFile = file(layout.buildDirectory.dir("../testkey.keystore"))
+            storePassword = "testkey"
+            keyAlias = "testkey"
+            keyPassword = "testkey"
         }
     }
 
     buildTypes {
-        getByName("debug") {
-            signingConfig = signingConfigs.getByName("debug")
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-
         getByName("release") {
-            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            resValue("string", "app_name", "InstallerX-Fork")
+            resValue("string", "app_version", app_version)
+            resValue("string", "GIT_COMMIT_HASH", getGitHash())
+            resValue("string", "GIT_COMMIT_AUTHOR", getGitCommitAuthor())
+            resValue("string", "GIT_COMMIT_BRANCH", getGitBranch())
+        }
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = getShortGitHash()
+            resValue("string", "app_name", "InstallerX-Fork Debug")
+            resValue("string", "app_version", app_version)
+            resValue("string", "GIT_COMMIT_HASH", getGitHash())
+            resValue("string", "GIT_COMMIT_AUTHOR", getGitCommitAuthor())
+            resValue("string", "GIT_COMMIT_BRANCH", getGitBranch())
         }
     }
 
