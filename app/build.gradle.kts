@@ -48,7 +48,7 @@ android {
             keyAlias = "testkey"
             keyPassword = "testkey"
         }
-        release {
+        create("release) {
             storeFile = file(layout.buildDirectory.dir("../release_key.jks"))
             storePassword = "tinyinstaller"
             keyAlias = "tinyinstaller"
