@@ -4,8 +4,7 @@ import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
 
-import com.rosan.dhizuku.shared.DhizukuVariables
-
+import dev.trindadedev.tinyinstaller.tofix.dhizuku.DhizukuVariables
 import dev.trindadedev.tinyinstaller.data.recycle.util.InstallIntentFilter
 import dev.trindadedev.tinyinstaller.data.recycle.util.delete
 
