@@ -4,7 +4,7 @@ import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
 
-import dev.trindadedev.tinyinstaller.tofix.dhizuku.DhizukuVariables
+import dev.trindadedev.tinyinstaller.tofix.dhizuku.DhVariables
 import dev.trindadedev.tinyinstaller.data.recycle.util.InstallIntentFilter
 import dev.trindadedev.tinyinstaller.data.recycle.util.delete
 
@@ -16,12 +16,12 @@ class DhizukuPrivilegedService : BasePrivilegedService() {
 
     override fun setDefaultInstaller(component: ComponentName, enable: Boolean) {
         devicePolicyManager.clearPackagePersistentPreferredActivities(
-            DhizukuVariables.COMPONENT_NAME,
+            DhVariables.COMPONENT_NAME,
             component.packageName
         )
         if (!enable) return
         devicePolicyManager.addPersistentPreferredActivity(
-            DhizukuVariables.COMPONENT_NAME,
+            DhVariables.COMPONENT_NAME,
             InstallIntentFilter, component
         )
     }
