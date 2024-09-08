@@ -128,7 +128,7 @@
 
     <string name="installer_channel_name">Notificação de instalação</string>
     <string name="installer_progress_channel_name">Notificação de processo de instalação</string>
-    <string name="installer_background_channel_name">Notificação de segundo plano
+    <string name="installer_background_channel_name">Notificação de segundo plano</string>
 
     <string name="installer_running">TinyInstaller em execução</string>
 
