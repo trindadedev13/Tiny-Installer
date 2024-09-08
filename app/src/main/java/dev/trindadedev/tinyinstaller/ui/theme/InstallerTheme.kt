@@ -81,7 +81,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun RobokTheme(
+fun InstallerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     highContrastDarkTheme: Boolean = false,
     dynamicColor: Boolean = true, // Dynamic color is available on Android 12+
