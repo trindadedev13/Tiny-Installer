@@ -48,6 +48,12 @@ android {
             keyAlias = "testkey"
             keyPassword = "testkey"
         }
+        getByName("release") {
+            storeFile = file(layout.buildDirectory.dir("../release_key.jks"))
+            storePassword = "tinyinstaller"
+            keyAlias = "tinyinstaller"
+            keyPassword = "tinyinstaller"
+        }
     }
 
     buildTypes {
