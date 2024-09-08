@@ -1,8 +1,6 @@
 pluginManagement {
     repositories {
         mavenLocal()
-//        maven { setUrl("https://maven.aliyun.com/repository/public/") }
-//        maven { setUrl("https://jitpack.io") }
         gradlePluginPortal()
         google()
         mavenCentral()
@@ -14,15 +12,13 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenLocal()
-//        maven { setUrl("https://maven.aliyun.com/repository/public/") }
-//        maven { setUrl("https://jitpack.io") }
         google()
         mavenCentral()
         maven { setUrl("https://maven.scijava.org/content/repositories/public/") }
     }
 }
 
-rootProject.name = "InstallerX"
+rootProject.name = "Tiny-Installer"
 include(
     ":app",
     ":hidden-api"
