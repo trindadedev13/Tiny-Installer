@@ -159,6 +159,7 @@ dependencies {
     implementation(libs.androidx.core)
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.material)
     implementation(libs.compose.ui)
     implementation(libs.compose.material)
     implementation(libs.compose.material3)
