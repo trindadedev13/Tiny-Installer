@@ -128,20 +128,32 @@ fun EditPage(
     ) {
         LazyColumn(
             modifier = Modifier
+                .padding(horizontal = 16.dp),
                 .fillMaxSize()
                 .padding(it),
         ) {
             item { DataNameWidget(viewModel = viewModel) }
+            divider()
             item { DataDescriptionWidget(viewModel = viewModel) }
+            divider()
             item { LabelWidget(label = stringResource(id = R.string.more)) }
+            divider()
             item { DataAuthorizerWidget(viewModel = viewModel) }
+            divider()
             item { DataCustomizeAuthorizerWidget(viewModel = viewModel) }
+            divider()
             item { DataInstallModeWidget(viewModel = viewModel) }
+            divider()
             item { DataDeclareInstallerWidget(viewModel = viewModel) }
+            divider()
             item { DataInstallerWidget(viewModel = viewModel) }
+            divider()
             item { DataForAllUserWidget(viewModel = viewModel) }
+            divider()
             item { DataAllowTestOnlyWidget(viewModel = viewModel) }
+            divider()
             item { DataAllowDowngradeWidget(viewModel = viewModel) }
+            divider()
             item { DataAutoDeleteWidget(viewModel = viewModel) }
         }
     }
@@ -154,6 +166,15 @@ class ShowFloatingActionButtonNestedScrollConnection(
         if (available.y.absoluteValue > 1) showFloatingState.value = available.y >= 0
         return super.onPreScroll(available, source)
     }
+}
+
+@Composable
+fun divider() {
+    Divider(
+        thickness = 0.5.dp,
+        color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+        modifier = Modifier.padding(horizontal = 16.dp)
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
