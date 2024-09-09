@@ -132,29 +132,53 @@ fun EditPage(
                 .fillMaxSize()
                 .padding(it),
         ) {
-            item { DataNameWidget(viewModel = viewModel) }
-            divider()
-            item { DataDescriptionWidget(viewModel = viewModel) }
-            divider()
-            item { LabelWidget(label = stringResource(id = R.string.more)) }
-            divider()
-            item { DataAuthorizerWidget(viewModel = viewModel) }
-            divider()
-            item { DataCustomizeAuthorizerWidget(viewModel = viewModel) }
-            divider()
-            item { DataInstallModeWidget(viewModel = viewModel) }
-            divider()
-            item { DataDeclareInstallerWidget(viewModel = viewModel) }
-            divider()
-            item { DataInstallerWidget(viewModel = viewModel) }
-            divider()
-            item { DataForAllUserWidget(viewModel = viewModel) }
-            divider()
-            item { DataAllowTestOnlyWidget(viewModel = viewModel) }
-            divider()
-            item { DataAllowDowngradeWidget(viewModel = viewModel) }
-            divider()
-            item { DataAutoDeleteWidget(viewModel = viewModel) }
+            item {
+                DataNameWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataDescriptionWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                LabelWidget(label = stringResource(id = R.string.more))
+                divider()
+            }
+            item {
+                DataAuthorizerWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataCustomizeAuthorizerWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataInstallModeWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataDeclareInstallerWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataInstallerWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataForAllUserWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataAllowTestOnlyWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataAllowDowngradeWidget(viewModel = viewModel)
+                divider()
+            }
+            item {
+                DataAutoDeleteWidget(viewModel = viewModel)
+            }
         }
     }
 }
