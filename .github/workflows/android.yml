@@ -108,6 +108,9 @@ jobs:
     needs: tiny-installer-release-build
     
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        
       - name: Download preview release apk
         uses: actions/download-artifact@v4
         with:
@@ -145,7 +148,10 @@ jobs:
     needs: tiny-installer-release-build
     
     steps:
-      - name: Download stae release apk
+      - name: Check out repository
+        uses: actions/checkout@v4
+        
+      - name: Download stable release apk
         uses: actions/download-artifact@v4
         with:
           name: tiny-installer-stable-release
@@ -182,6 +188,9 @@ jobs:
     needs: tiny-installer-release-build
     
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        
       - name: Download unstable release apk
         uses: actions/download-artifact@v4
         with:
