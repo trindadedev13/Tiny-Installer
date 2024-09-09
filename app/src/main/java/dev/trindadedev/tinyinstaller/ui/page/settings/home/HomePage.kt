@@ -94,7 +94,7 @@ fun StatusWidget() {
                 painter = rememberDrawablePainter(
                     drawable = ContextCompat.getDrawable(
                         LocalContext.current,
-                        R.mipmap.ic_launcher
+                        R.drawable.icon
                     )
                 ),
                 contentDescription = stringResource(id = R.string.app_name)
