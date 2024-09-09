@@ -110,7 +110,9 @@ android {
     }
 
     kotlin {
-        jvmToolchain(18)
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_18)
+        }
     }
 
     buildFeatures {
