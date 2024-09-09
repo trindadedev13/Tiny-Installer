@@ -1,0 +1,5 @@
+A Package Installer with Material Design 3 UI.
+
+A beautiful and simple application to improve the experience of installing packages on Android.
+To use the app, you can use Shizuku (Android 11+), Dhizuku or Root.
+An application created by [Rosan](https://github.com/iamr0s), and update/fix by [trindadedev](https://github/trindadedev13)
