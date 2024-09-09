@@ -140,7 +140,7 @@ fun DiscussWidget() {
             }
         ),
         HomeCardItem(
-            label = stringResource(id = R.string.whatsapp_group_official),
+            label = stringResource(id = R.string.whatsapp_group),
             onClick = {
                 openUrl(
                     context,
