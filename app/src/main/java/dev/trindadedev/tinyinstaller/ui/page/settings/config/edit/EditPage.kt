@@ -127,10 +127,9 @@ fun EditPage(
         snackbarHost = { SnackbarHost(hostState = snackBarHostState) },
     ) {
         // TO:DO format code.
-        ElevatedCard {
+        ElevatedCard(Modifier.padding(horizontal = 16.dp) {
         LazyColumn(
             modifier = Modifier
-                .padding(horizontal = 16.dp)
                 .fillMaxSize()
                 .padding(it),
         ) {
