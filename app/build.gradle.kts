@@ -11,7 +11,7 @@ plugins {
     id("kotlinx-serialization")
 }
 
-val app_version = "2.0.0"
+val app_version = "0.0.1"
 
 @Suppress("UnstableApiUsage")
 android {
@@ -24,7 +24,7 @@ android {
         namespace = "dev.trindadedev.tinyinstaller"
         minSdk = 21
         targetSdk = 34
-        versionCode = 26
+        versionCode = 1
         versionName = app_version
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -105,12 +105,12 @@ android {
     }
 
     compileOptions {
-        targetCompatibility = JavaVersion.VERSION_17
-        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_18
+        sourceCompatibility = JavaVersion.VERSION_18
     }
 
     kotlin {
-        jvmToolchain(17)
+        jvmToolchain(18)
     }
 
     buildFeatures {
