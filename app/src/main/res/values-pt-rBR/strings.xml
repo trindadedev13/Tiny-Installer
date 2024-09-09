@@ -23,10 +23,9 @@
     <string name="binance">Binance</string>
 
     <string name="discuss">Chat &amp; Feedback &amp; Update</string>
-    <string name="qq_channel">QQ channel</string>
-    <string name="qq_group_official">QQ group (official)</string>
+    <string name="whatsapp_group_official">Grupo do WhatsApp</string>
     <string name="telegram_group">Grupo do Telegram</string>
-
+    
     <string name="basic">Básico</string>
     <string name="lock_default_installer">Definir como instalador padrão</string>
     <string name="lock_default_installer_dsp">Defina o Tiny-Installer como o aplicativo padrão para instalar apks</string>
