@@ -67,8 +67,7 @@ android {
             resValue("string", "GIT_COMMIT_BRANCH", getGitBranch())
         }
         getByName("debug") {
-            applicationIdSuffix = ".debug"
-            versionNameSuffix = getShortGitHash()
+            versionNameSuffix = "-@" + getShortGitHash()
             resValue("string", "app_name", "Tiny-Installer Debug")
             resValue("string", "app_version", app_version)
             resValue("string", "GIT_COMMIT_HASH", getGitHash())
