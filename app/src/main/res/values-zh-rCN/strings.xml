@@ -17,11 +17,6 @@
     <string name="preview">预览版</string>
     <string name="unstable">测试版</string>
 
-    <string name="donate">捐赠</string>
-    <string name="alipay">支付宝</string>
-    <string name="wechat">微信</string>
-    <string name="binance">币安</string>
-
     <string name="discuss">讨论 &amp; 反馈 &amp; 更新</string>
     <string name="whatsapp_channel">WhatsApp 群组</string>
     <string name="telegram_group">Telegram 群组</string>
