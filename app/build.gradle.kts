@@ -60,6 +60,7 @@ android {
         getByName("release") {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
             resValue("string", "app_name", "Tiny-Installer")
             resValue("string", "app_version", app_version)
             resValue("string", "GIT_COMMIT_HASH", getGitHash())
