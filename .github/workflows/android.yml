@@ -164,7 +164,7 @@ jobs:
           
       - name: Rename file 
         run: |
-          mv app-stable-release.apk tiny-installer-stable-.apk
+          mv app-stable-release.apk tiny-installer-stable.apk
           ls 
 
       - name: Send APK Stable Release Channel Telegram
@@ -204,7 +204,7 @@ jobs:
           
       - name: Rename file 
         run: |
-          mv app-unstable-release.apk tiny-installer-unstable-.apk
+          mv app-unstable-release.apk tiny-installer-unstable.apk
           ls 
 
       - name: Send APK Unstable Release Channel Telegram
