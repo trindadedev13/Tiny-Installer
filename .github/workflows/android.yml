@@ -124,7 +124,7 @@ jobs:
           
       - name: Rename file 
         run: |
-          mv app-preview-release tiny-installer-preview.apk
+          mv app-preview-release.apk tiny-installer-preview.apk
           ls 
 
       - name: Send APK Preview Release Channel Telegram
