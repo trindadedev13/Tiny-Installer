@@ -128,7 +128,7 @@ fun EditPage(
     ) {
         LazyColumn(
             modifier = Modifier
-                .padding(horizontal = 16.dp),
+                .padding(horizontal = 16.dp)
                 .fillMaxSize()
                 .padding(it),
         ) {
