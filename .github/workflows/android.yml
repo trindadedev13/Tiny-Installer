@@ -34,13 +34,6 @@ jobs:
       - name: Build with Gradle
         id: gradle_build_debug
         run: ./gradlew assembleDebug
-
-      - name: Upload preview debug apk
-        uses: actions/upload-artifact@v4
-        with:
-          name: tiny-installer-preview-debug
-          compression-level: 0
-          path: app/build/outputs/apk/preview/debug
           
       - name: Upload stable debug apk
         uses: actions/upload-artifact@v4
@@ -49,12 +42,6 @@ jobs:
           compression-level: 0
           path: app/build/outputs/apk/stable/debug
           
-      - name: Upload unstable debug apk
-        uses: actions/upload-artifact@v4
-        with:
-          name: tiny-installer-unstable-debug
-          compression-level: 0
-          path: app/build/outputs/apk/unstable/debug
           
   tiny-installer-release-build:
     name: Build Tiny Release APK
@@ -81,66 +68,13 @@ jobs:
         id: gradle_build_release
         run: ./gradlew assembleRelease
 
-      - name: Upload preview release apk
-        uses: actions/upload-artifact@v4
-        with:
-          name: tiny-installer-preview-release
-          compression-level: 0
-          path: app/build/outputs/apk/preview/release
-          
       - name: Upload stable release apk
         uses: actions/upload-artifact@v4
         with:
           name: tiny-installer-stable-release
           compression-level: 0
           path: app/build/outputs/apk/stable/release 
-          
-      - name: Upload unstable release apk
-        uses: actions/upload-artifact@v4
-        with:
-          name: tiny-installer-unstable-release
-          compression-level: 0
-          path: app/build/outputs/apk/unstable/release
-          
-  send_release_preview_apk:
-    name: Send Preview Release APK
-    runs-on: ubuntu-latest
-    needs: tiny-installer-release-build
-    
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        
-      - name: Download preview release apk
-        uses: actions/download-artifact@v4
-        with:
-          name: tiny-installer-preview-release
-          
-      - name: Get the last commit message
-        id: get_commit_msg
-        run: |
-          commit_message=$(git log -1 --pretty=format:'%s')
-          echo "message=$commit_message" >> $GITHUB_OUTPUT
-          
-      - name: Rename file 
-        run: |
-          mv app-preview-release.apk tiny-installer-preview.apk
-          ls 
-
-      - name: Send APK Preview Release Channel Telegram
-        if: success()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: markdown
-          document: tiny-installer-preview.apk
-          disable_web_page_preview: false
-          message: |
-            *${{ github.actor }}* committed to [${{ github.repository }}](https://github.com/${{ github.repository }})
-
-            Branch: *${{ github.head_ref }}*
-            Commit message: `${{ steps.get_commit_msg.outputs.message }}`
+         
   
   send_release_stable_apk:
     name: Send Stable Release APK
@@ -175,46 +109,6 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           format: markdown
           document: tiny-installer-stable.apk
-          disable_web_page_preview: false
-          message: |
-            *${{ github.actor }}* committed to [${{ github.repository }}](https://github.com/${{ github.repository }})
-
-            Branch: *${{ github.head_ref }}*
-            Commit message: `${{ steps.get_commit_msg.outputs.message }}`
-  
-  send_release_unstable_apk:
-    name: Send Unstable Release APK
-    runs-on: ubuntu-latest
-    needs: tiny-installer-release-build
-    
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        
-      - name: Download unstable release apk
-        uses: actions/download-artifact@v4
-        with:
-          name: tiny-installer-unstable-release
-          
-      - name: Get the last commit message
-        id: get_commit_msg
-        run: |
-          commit_message=$(git log -1 --pretty=format:'%s')
-          echo "message=$commit_message" >> $GITHUB_OUTPUT
-          
-      - name: Rename file 
-        run: |
-          mv app-unstable-release.apk tiny-installer-unstable.apk
-          ls 
-
-      - name: Send APK Unstable Release Channel Telegram
-        if: success()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: markdown
-          document: tiny-installer-unstable.apk
           disable_web_page_preview: false
           message: |
             *${{ github.actor }}* committed to [${{ github.repository }}](https://github.com/${{ github.repository }})
