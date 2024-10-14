@@ -12,7 +12,7 @@ agp = "8.6.0"
 kotlin = "2.0.20"
 compose = "1.7.3"
 room = "2.6.1"
-ktx-serialization = "1.7.2"
+ktx-serialization = "1.7.3"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
 
