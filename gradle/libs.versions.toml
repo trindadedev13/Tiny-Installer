@@ -56,7 +56,7 @@ lsposed-hiddenapibypass = { group = "org.lsposed.hiddenapibypass", name = "hidde
 # Koin Inject
 # https://insert-koin.io/docs/setup/koin
 koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.5.6" }
-koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.5.6" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version = "4.0.0" }
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "4.0.0" }
 
 # Lottie for Android Compose
