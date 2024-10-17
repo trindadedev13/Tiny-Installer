@@ -15,7 +15,7 @@ room = "2.6.1"
 ktx-serialization = "1.7.3"
 accompanist = "0.36.0"
 rikka-shizuku = "13.1.5"
-koin = "3.5.6"
+koin = "4.0.0"
 
 [plugins]
 agp-lib = { id = "com.android.library", version.ref = "agp" }
